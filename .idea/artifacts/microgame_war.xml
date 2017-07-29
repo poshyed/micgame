@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="microgame:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="microgame.war">
+      <element id="artifact" artifact-name="microgame:war exploded" />
+    </root>
+  </artifact>
+</component>

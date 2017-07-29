@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.zj.mapper.UserMapper">
+    <insert id="addUser" parameterType="User">
+        INSERT INTO p_user (USERNAME, PASSWORD) VALUE (#{username}, #{password})
+    </insert>
+    <select id="findLoginUser" parameterType="string" resultType="User">
+        SELECT *
+        FROM p_user
+        WHERE USERNAME = #{username}
+    </select>
+    <update id="updateUser" parameterType="User">
+        UPDATE p_user
+        SET USERNAME = #{username}, PASSWORD = #{password}
+        WHERE id = #{id}
+    </update>
+    <delete id="deleteUser" parameterType="User">
+        DELETE FROM p_user
+        WHERE ID = #{id}
+    </delete>
+</mapper>
